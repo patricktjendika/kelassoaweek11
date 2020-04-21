@@ -121,6 +121,18 @@ app.post('/createPlaylist', (req, res) => {
     res.send(obj);
 });
 
+app.get('/showDummies', (req, res) => {
+    var arrObj =[{
+        Nama: "Budi",
+        Umur: "20 Tahun"
+    },{
+        Nama: "Patrick",
+        Umur: "21 Tahun"
+    }
+    ];
+    res.send(arrObj);
+});
+
 app.get('/searchSongByKeyword/:keyword', (req, res) => {
     //const song = songs.find(c => c.judul == req.params.id.match(req.params.keyword));
     const arrSong=[];
