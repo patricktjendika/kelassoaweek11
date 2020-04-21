@@ -1,0 +1,33 @@
+1. localhost:3000/registerUser
+{
+	nama: "Pat",
+    email: "pat@gmail.com",
+    password: "123",
+    tipe: "0"
+}
+
+2. localhost:3000/uploadSong
+{
+	judul: "Judul 1",
+    genre: "Pop",
+    durasi: 180,
+    id_user: "1"
+}
+
+3. localhost:3000/createPlaylist
+{
+	email: "pat@gmail.com",
+    judul_playlist: "Judul Playlist 1",
+    id_lagu: 1,2
+}
+
+4. localhost:3000/searchSongByKeyword/:keyword
+
+5. localhost:3000/deleteSong/:judul
+
+6. localhost:3000/getPlaylist/:emailpengguna
+
+7. localhost:3000/updatePlaylist/:idplaylist
+{
+	nama: "Judul Baru"
+}
