@@ -1,10 +1,22 @@
 const express = require('express');
 const app = express();
-var bodyParser = require('body-parser')
+const mysql = require("mysql");
+var bodyParser = require('body-parser');
+require('dotenv').config();
 app.use(express.json()); // untuk post
 
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+
+const pool = mysql.createPool(
+    {
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASS,
+        port: process.env.DB_PORT,
+        database: process.env.DB_NAME
+    }
+);
 
 const users = [];
 const songs = [];
